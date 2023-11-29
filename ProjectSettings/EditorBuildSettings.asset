@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/01. Scenes/1. KJI/Loading.unity
     guid: 01fc03d064a094e6a95f6ab867c78867
   - enabled: 1
+    path: Assets/01. Scenes/1. KJI/Test/Demo_Final 1.unity
+    guid: de1965fce017be64ea04eb7edcdf444c
+  - enabled: 1
     path: Assets/01. Scenes/1. KJI/Test/PlayerTest.unity
     guid: bd16866f598414d6fb02fe0fbc25a8c4
   m_configObjects:
