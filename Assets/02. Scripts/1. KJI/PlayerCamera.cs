@@ -8,6 +8,8 @@ public class PlayerCamera : MonoBehaviour
 
     private float rotationX = 0.0f;
 
+    public Camera mainCamera; // 카메라를 여기에 할당하세요.
+
     void Update()
     {
         // 마우스 입력 받기
@@ -23,5 +25,22 @@ public class PlayerCamera : MonoBehaviour
 
         // 상하 회전 적용
         transform.localRotation = Quaternion.Euler(rotationX, 0.0f, 0.0f);
+
+        if (mainCamera != null)
+        {
+            // Canvas를 카메라의 위치와 회전에 맞게 설정합니다.
+            transform.position = mainCamera.transform.position;
+            transform.rotation = mainCamera.transform.rotation;
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (mainCamera != null)
+        {
+            // Canvas를 카메라의 위치와 회전에 맞게 설정합니다.
+            transform.position = mainCamera.transform.position;
+            transform.rotation = mainCamera.transform.rotation;
+        }
     }
 }
