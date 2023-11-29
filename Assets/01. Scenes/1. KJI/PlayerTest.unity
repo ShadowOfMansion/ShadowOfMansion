@@ -3557,7 +3557,6 @@ GameObject:
   - component: {fileID: 1522629797}
   - component: {fileID: 1522629796}
   - component: {fileID: 1522629795}
-  - component: {fileID: 1522629801}
   - component: {fileID: 1522629800}
   - component: {fileID: 1522629799}
   m_Layer: 0
@@ -3651,9 +3650,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1762967228}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1522629799
 MonoBehaviour:
@@ -3667,7 +3667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4dba34a1d6812b4284b23a858724a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
 --- !u!114 &1522629800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,25 +3677,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522629794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fa41258e471c243ad41ecda34688b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 485962a5a1f984f8caf09c810960cd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
---- !u!114 &1522629801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522629794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3258bb5a7c5f1d94e97ee29c42228e2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 10
-  isJumping: 0
+  speed: 5
 --- !u!1001 &1573101369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4423,13 +4408,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762967224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.66999054, y: 1.6000004, z: -5.8200073}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.09, y: 0.54, z: -0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1522629798}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1818559098
 PrefabInstance:
