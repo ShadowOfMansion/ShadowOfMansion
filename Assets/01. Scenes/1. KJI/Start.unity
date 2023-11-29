@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0070944834, g: 0.0063356906, b: 0.005537647, a: 1}
+  m_IndirectSpecularColor: {r: 0.077214114, g: 0.071829, b: 0.06521285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12010,7 +12010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shdow of Massion
+  m_text: Shadow of Mansion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d23eeb373eb87d441b37a1ba57572577, type: 2}
   m_sharedMaterial: {fileID: -5673708148629516690, guid: d23eeb373eb87d441b37a1ba57572577,
