@@ -41,7 +41,7 @@ public class Loading : MonoBehaviour
             loadingText.text = (asyncOperation.progress * 100).ToString() + "%";
 
             // 특정 진행률일 때 다음 씬을 보여주고 싶다.
-            if (asyncOperation.progress >= 0.9f)
+            if (asyncOperation.progress >= 0.99f)
             {
                 // 씬이 화면에 보이게 하고 싶다.
                 asyncOperation.allowSceneActivation = true;
