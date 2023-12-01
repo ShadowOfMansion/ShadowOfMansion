@@ -6,12 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/01. Scenes/Start.unity
+    guid: b85c215da48e4a0459d900773c9fa4ff
+  - enabled: 1
+    path: Assets/01. Scenes/Loading.unity
+    guid: b8e61e3ac6c393c4fb06a8fc48840403
+  - enabled: 1
+    path: Assets/01. Scenes/Game.unity
+    guid: dd30c99bddff2434fb4f587bfa0266a6
+  - enabled: 0
     path: Assets/01. Scenes/1. KJI/Start.unity
     guid: c2adb8a98d55d4305af50dd39165a97b
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/1. KJI/Loading.unity
     guid: 01fc03d064a094e6a95f6ab867c78867
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/1. KJI/Test/Demo_Final_1.unity
     guid: de1965fce017be64ea04eb7edcdf444c
   - enabled: 0
