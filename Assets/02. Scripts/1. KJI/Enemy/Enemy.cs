@@ -1,3 +1,7 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.Searcher;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -16,16 +20,25 @@ public class Enemy : MonoBehaviour
     public AudioClip searchSound; // Search 상태의 소리
     public AudioClip rampageSound; // Rampage 상태의 소리
 
-    private enum EnemyState { Idle, Chase, Search, Rampage, Attack } // 적의 상태를 정의한 열거형
+    private enum EnemyState
+    {
+        Idle,
+        Chase,
+        Search,
+        Rampage,
+        Attack
+    } 
+
     private EnemyState currentState = EnemyState.Idle; // 적의 현재 상태
     private float timeSinceLastSighting = 0f; // 플레이어를 최근에 마지막으로 발견한 후 지난 시간
     private float rampageTimer = 0f; // 폭주 상태의 지속 시간을 측정하기 위한 타이머
 
     void Start()
     {
-        // 컴포넌트 초기화
+        
         enemyAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        player = GameObject.Find("Player").transform;
     }
 
     void Update()
@@ -62,6 +75,7 @@ public class Enemy : MonoBehaviour
                 if (distanceToPlayer <= detectionRange)
                 {
                     currentState = EnemyState.Chase;
+                    print("상태전환: Idle -> Search");
                 }
                 break;
 
@@ -70,11 +84,13 @@ public class Enemy : MonoBehaviour
                 if (distanceToPlayer <= attackRange)
                 {
                     currentState = EnemyState.Attack;
+                    print("상태전환: Idle -> Attack");
                 }
                 else if (distanceToPlayer > detectionRange)
                 {
                     currentState = EnemyState.Search;
                     timeSinceLastSighting = 0f;
+                    print("상태전환: Attack -> Idle");
                 }
                 break;
 
@@ -85,10 +101,13 @@ public class Enemy : MonoBehaviour
                 {
                     currentState = EnemyState.Rampage;
                     rampageTimer = 0f;
+                    print("상태전환:  Search -> Rampage ");
+
                 }
                 else if (distanceToPlayer <= detectionRange)
                 {
                     currentState = EnemyState.Chase;
+                    print("상태전환:  Rampage -> Search ");
                 }
                 break;
 
@@ -98,10 +117,12 @@ public class Enemy : MonoBehaviour
                 if (rampageTimer >= rampageDuration)
                 {
                     currentState = EnemyState.Idle;
+                    print("상태전환:  Rampage -> Idle ");
                 }
                 else if (distanceToPlayer <= detectionRange)
                 {
                     currentState = EnemyState.Chase;
+                    print("상태전환:  Rampage -> Chase ");
                 }
                 break;
 
