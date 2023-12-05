@@ -215,8 +215,6 @@ namespace HFPS.Player
                 device = InputHandler.CurrentDevice;
 
                 bp_Use = InputHandler.CompositeOf("Use").GetBindingPath();
-                rotateKey = InputHandler.ReadButton("Fire");
-                selectKey = InputHandler.ReadButtonOnce(this, "Fire");
 
                 lookVector = InputHandler.ReadInput<Vector2>("Look", "PlayerExtra");
                 movementVector = InputHandler.ReadInput<Vector2>("Move");

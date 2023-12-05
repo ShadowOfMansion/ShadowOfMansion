@@ -33,8 +33,6 @@ namespace HFPS.Player
         public bool zoomEnabled = true;
 
         private bool ZoomKey;
-        private bool LeanRight;
-        private bool LeanLeft;
 
         private Camera MainCamera;
         private Camera WeaponCamera;
@@ -67,20 +65,8 @@ namespace HFPS.Player
         {
             if (InputHandler.InputIsInitialized)
             {
-                if (InputHandler.IsActionExist("LeanLeft"))
-                {
-                    LeanLeft = InputHandler.ReadButton("LeanLeft");
-                }
-
-                if (InputHandler.IsActionExist("LeanRight"))
-                {
-                    LeanRight = InputHandler.ReadButton("LeanRight");
-                }
-
                 ZoomKey = InputHandler.ReadButton("Zoom");
             }
-
-            LeanUpdate();
 
             if (zoomEnabled && !wallHit)
             {
@@ -132,56 +118,6 @@ namespace HFPS.Player
                     MainCamera.transform.localRotation = Quaternion.Slerp(MainCamera.transform.localRotation, Quaternion.Euler(0, 0, LeanAngle), Time.deltaTime * LeanSpeed);
                     MainCamera.transform.localPosition = Vector3.Lerp(MainCamera.transform.localPosition, new Vector3(leanPos, 0, 0), Time.deltaTime * LeanSpeed);
                     break;
-            }
-        }
-
-        void LeanUpdate()
-        {
-            RaycastHit raycastHit;
-
-            if (LeanRight)
-            {
-                if (Physics.Raycast(MainCamera.transform.parent.position, MainCamera.transform.parent.TransformDirection(Vector3.right * 1f), out raycastHit, LeanRay, LeanMask))
-                {
-                    float distance = Vector3.Distance(raycastHit.point, MainCamera.transform.parent.position);
-
-                    if (distance > LeanBackDistance)
-                    {
-                        Lean(LeanDirections.Right);
-                    }
-                    else
-                    {
-                        Lean(LeanDirections.Normal);
-                    }
-                }
-                else
-                {
-                    Lean(LeanDirections.Right);
-                }
-            }
-            else if (LeanLeft)
-            {
-                if (Physics.Raycast(MainCamera.transform.parent.position, MainCamera.transform.parent.TransformDirection(Vector3.left * 1f), out raycastHit, LeanRay, LeanMask))
-                {
-                    float distance = Vector3.Distance(raycastHit.point, MainCamera.transform.parent.position);
-
-                    if (distance > LeanBackDistance)
-                    {
-                        Lean(LeanDirections.Left);
-                    }
-                    else
-                    {
-                        Lean(LeanDirections.Normal);
-                    }
-                }
-                else
-                {
-                    Lean(LeanDirections.Left);
-                }
-            }
-            else
-            {
-                Lean(LeanDirections.Normal);
             }
         }
 

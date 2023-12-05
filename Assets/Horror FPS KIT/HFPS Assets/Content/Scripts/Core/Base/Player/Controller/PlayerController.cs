@@ -14,7 +14,7 @@ namespace HFPS.Player
     [RequireComponent(typeof(CharacterController), typeof(HealthManager), typeof(FootstepsController))]
     public class PlayerController : Singleton<PlayerController>
     {
-        public enum CharacterState { Stand, Crouch, Prone }
+        public enum CharacterState { Stand, Crouch }
         public enum MovementState { Normal, Ladder }
 
         #region Structures
@@ -24,7 +24,6 @@ namespace HFPS.Player
             public float walkSpeed = 3;
             public float runSpeed = 7;
             public float crouchSpeed = 2;
-            public float proneSpeed = 1;
             public float inWaterSpeed = 2;
             public float climbSpeed = 1.5f;
             public float pushSpeed = 2;
@@ -40,7 +39,6 @@ namespace HFPS.Player
             public bool enableJump = true;
             public bool enableRun = true;
             public bool enableCrouch = true;
-            public bool enableProne = true;
             public bool enableSliding = false;
             public bool airControl = false;
             public bool enableFly = false;
@@ -58,7 +56,6 @@ namespace HFPS.Player
             public float fallDamageMultiplier = 5.0f;
             public float standFallTreshold = 8;
             public float crouchFallTreshold = 4;
-            public float consoleToProneTime = 0.5f;
             public float wallRicochetCap = 0.2f;
         }
 
@@ -105,15 +102,12 @@ namespace HFPS.Player
         {
             public float normalHeight = 2.0f;
             public float crouchHeight = 1.4f;
-            public float proneHeight = 0.6f;
             [Space(5)]
             public float camNormalHeight = 0.9f;
             public float camCrouchHeight = 0.2f;
-            public float camProneHeight = -0.4f;
             [Space(5)]
             public Vector3 normalCenter = Vector3.zero;
             public Vector3 crouchCenter = new Vector3(0, -0.3f, 0);
-            public Vector3 proneCenter = new Vector3(0, -0.7f, 0);
         }
 
         [Serializable]
@@ -193,16 +187,11 @@ namespace HFPS.Player
         private bool JumpPressed;
         private bool RunPressed;
         private bool CrouchPressed;
-        private bool PronePressed;
         private bool ZoomPressed;
 
         private float inputX;
         private float inputY;
         private Vector2 inputMovement;
-
-        private bool proneTimeStart;
-        private float proneTime;
-        private bool inProne;
 
         protected RandomHelper random = new RandomHelper();
         #endregion
@@ -401,44 +390,7 @@ namespace HFPS.Player
                     }
                 }
 
-                if (!InputHandler.IsCompositesSame("Crouch", "Prone"))
-                {
-                    CrouchPressed = InputHandler.ReadButtonOnce(this, "Crouch");
-                    PronePressed = InputHandler.ReadButtonOnce(this, "Prone");
-                }
-                else
-                {
-                    bool prone = InputHandler.ReadButton("Prone");
-
-                    if (prone && !inProne)
-                    {
-                        proneTimeStart = true;
-                        proneTime += Time.deltaTime;
-
-                        if (proneTime >= controllerSettings.consoleToProneTime)
-                        {
-                            PronePressed = true;
-                            inProne = true;
-                        }
-                    }
-                    else if (proneTimeStart && proneTime < controllerSettings.consoleToProneTime)
-                    {
-                        CrouchPressed = true;
-                        proneTimeStart = false;
-                        proneTime = 0;
-                    }
-                    else
-                    {
-                        CrouchPressed = false;
-                        PronePressed = false;
-                        proneTime = 0;
-
-                        if (!prone && inProne)
-                        {
-                            inProne = false;
-                        }
-                    }
-                }
+                CrouchPressed = InputHandler.ReadButtonOnce(this, "Crouch");
 
                 if (isControllable)
                 {
@@ -644,10 +596,6 @@ namespace HFPS.Player
                         {
                             movementSpeed = basicSettings.crouchSpeed;
                         }
-                        else if (characterState == CharacterState.Prone)
-                        {
-                            movementSpeed = basicSettings.proneSpeed;
-                        }
 
                         //Apply normal movement physics
                         moveDirection = new Vector3(inputMovement.x, -antiBumpFactor, inputMovement.y);
@@ -793,24 +741,6 @@ namespace HFPS.Player
 
                         StartCoroutine(AntiSpam());
                     }
-
-                    //Prone Player
-                    if (PronePressed && !flyControl && controllerFeatures.enableProne)
-                    {
-                        if (characterState != CharacterState.Prone)
-                        {
-                            characterState = CharacterState.Prone;
-                        }
-                        else if (characterState == CharacterState.Prone)
-                        {
-                            if (CheckDistance() > 1.6f)
-                            {
-                                characterState = CharacterState.Stand;
-                            }
-                        }
-
-                        StartCoroutine(AntiSpam());
-                    }
                 }
             }
 
@@ -856,17 +786,6 @@ namespace HFPS.Player
 
                 Vector3 camPosition = mouseLook.localPosition;
                 camPosition.y = Mathf.MoveTowards(camPosition.y, controllerAdjustments.camCrouchHeight, Time.smoothDeltaTime * basicSettings.stateChangeSpeed);
-                mouseLook.localPosition = camPosition;
-            }
-            else if (characterState == CharacterState.Prone)
-            {
-                //Prone Position
-                CharacterControl.height = controllerAdjustments.proneHeight;
-                CharacterControl.center = controllerAdjustments.proneCenter;
-                fallDamageThreshold = controllerSettings.crouchFallTreshold;
-
-                Vector3 camPosition = mouseLook.localPosition;
-                camPosition.y = Mathf.MoveTowards(camPosition.y, controllerAdjustments.camProneHeight, Time.smoothDeltaTime * basicSettings.stateChangeSpeed);
                 mouseLook.localPosition = camPosition;
             }
 
@@ -1021,7 +940,6 @@ namespace HFPS.Player
         void ApplyFallingDamage(float fallDistance)
         {
             healthManager.ApplyDamage((int)(fallDistance * controllerSettings.fallDamageMultiplier));
-            if (characterState != CharacterState.Prone) footsteps.OnJump();
             StartCoroutine(ApplyKickback(new Vector3(12, UnityEngine.Random.Range(-2.0f, 2.0f), 0), 0.1f));
         }
 
@@ -1034,14 +952,6 @@ namespace HFPS.Player
                 CharacterControl.center = controllerAdjustments.crouchCenter;
                 fallDamageThreshold = controllerSettings.crouchFallTreshold;
                 mouseLook.localPosition = new Vector3(mouseLook.localPosition.x, controllerAdjustments.camCrouchHeight, mouseLook.localPosition.z);
-            }
-            else if (state == CharacterState.Prone)
-            {
-                //Prone Position
-                CharacterControl.height = controllerAdjustments.proneHeight;
-                CharacterControl.center = controllerAdjustments.proneCenter;
-                fallDamageThreshold = controllerSettings.crouchFallTreshold;
-                mouseLook.localPosition = new Vector3(mouseLook.localPosition.x, controllerAdjustments.camProneHeight, mouseLook.localPosition.z);
             }
 
             characterState = state;

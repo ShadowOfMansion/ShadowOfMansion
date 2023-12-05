@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Prone",
-                    "type": "Button",
-                    "id": "ab8210bf-f885-4a75-81d4-287fda557994",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Run",
                     "type": "Button",
                     "id": "9557f416-8bc0-4628-b19b-24040c6970d1",
@@ -60,24 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Fire",
-                    "type": "Button",
-                    "id": "4dadf895-749b-4505-8b80-a58810d3072f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Reload",
-                    "type": "Button",
-                    "id": "3257b54e-b88b-4547-8bfe-8ed62edf1c46",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Use",
                     "type": "Button",
                     "id": "473b1435-8049-4969-8faf-755a5e44ecb3",
@@ -96,54 +69,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "LeanLeft",
-                    "type": "Button",
-                    "id": "0121ab9b-b675-4927-b07e-938cba4ef353",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "LeanRight",
-                    "type": "Button",
-                    "id": "9922a5d4-1599-4582-85a9-143d325ab649",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "UseItem1",
+                    "name": "UseFlashlight",
                     "type": "Button",
                     "id": "23834e28-0e95-4727-9252-a63bb5b3f225",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "UseItem2",
-                    "type": "Button",
-                    "id": "af92c5ac-c68b-45ab-81d1-5ead34ded3c0",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "UseItem3",
-                    "type": "Button",
-                    "id": "d980f608-acf6-4c38-9ef6-78cbedc91977",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "UseItem4",
-                    "type": "Button",
-                    "id": "089a11e3-d9e8-40d5-b728-77e2ec91bc1c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -380,72 +308,6 @@
                 },
                 {
                     "name": "",
-                    "id": "b9e30ef1-ef6b-4291-84c5-03ae013429b1",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f1291956-583f-4f2f-bd71-40c9a1f616c1",
-                    "path": "<DualShockGamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c7e73c6f-7f23-486b-b1e7-b3fe22282a9e",
-                    "path": "<XInputController>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fd2ce38a-28b7-4e07-ae27-73c3b9f44be2",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4a93f0f4-69f0-4747-bcce-e5e12b21c8d5",
-                    "path": "<DualShockGamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8bc3294b-022e-4bc0-a704-1730314dda99",
-                    "path": "<XInputController>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "283ecd13-1d67-416c-ad22-2e3ac351d935",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -512,78 +374,12 @@
                 },
                 {
                     "name": "",
-                    "id": "82f71948-d6d6-4701-821d-31b777ac2bda",
-                    "path": "<Keyboard>/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "LeanLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "14b610e9-98d8-4225-bc7b-68f398a48cf0",
-                    "path": "<DualShockGamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "LeanLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4432497e-fb62-4f0e-abba-369655b7a8dd",
-                    "path": "<XInputController>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "LeanLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5bfc2066-75ce-40c3-a8a7-6887c56ded14",
-                    "path": "<Keyboard>/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "LeanRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c2b4aee3-4e83-4446-b250-cf0240957b92",
-                    "path": "<DualShockGamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "LeanRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9e26fc90-c60a-4f82-bcef-780d0170e645",
-                    "path": "<XInputController>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "LeanRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b8ace031-d696-4a54-bd7d-2e3e5d08b97a",
                     "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "UseItem1",
+                    "action": "UseFlashlight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -594,7 +390,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PS4",
-                    "action": "UseItem1",
+                    "action": "UseFlashlight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -605,106 +401,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "UseItem1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "46540fdc-7524-40c0-ace2-6489fd6763d1",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "UseItem2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "97b93ce5-3f50-4ee1-bff4-2e04dd1f1ff3",
-                    "path": "<DualShockGamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "UseItem2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e6df1ed0-4552-493f-b390-fad2c2f5eea8",
-                    "path": "<XInputController>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "UseItem2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2fe832ce-789b-44b3-8dae-8c8f58725524",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "UseItem3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ea1dba0d-c530-49d9-9ca3-783cfacc5db9",
-                    "path": "<DualShockGamepad>/dpad/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "UseItem3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8df0444a-0941-4241-a9e4-6b654fb8acb2",
-                    "path": "<XInputController>/dpad/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "UseItem3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "51393037-8614-47ef-8ebf-1c1004aec689",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "UseItem4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f4705dcb-09cd-4547-a4fb-845c58a70ea5",
-                    "path": "<DualShockGamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "UseItem4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ae828441-b6b4-4f24-86cb-895556382be0",
-                    "path": "<XInputController>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "UseItem4",
+                    "action": "UseFlashlight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -771,39 +468,6 @@
                     "processors": "",
                     "groups": "Xbox",
                     "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2056db64-9927-46cf-a974-0ac1553a53f2",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "Prone",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d57d71c3-26a1-4cff-8749-dda0140e3b9c",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "Prone",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9d872620-3e21-43ff-885e-700eb2cc0657",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "Prone",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
