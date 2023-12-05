@@ -26,7 +26,7 @@
                 {
                     "name": "Prone",
                     "type": "Button",
-                    "id": "357da143-ba18-4fb0-b3f6-b3884db5b667",
+                    "id": "ab8210bf-f885-4a75-81d4-287fda557994",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -276,39 +276,6 @@
                     "processors": "",
                     "groups": "Xbox",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ef68eac6-2908-44f3-abda-3dcc9b1841db",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PC",
-                    "action": "Prone",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dff84369-b931-49a6-a007-89c68e795ae0",
-                    "path": "<DualShockGamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "PS4",
-                    "action": "Prone",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ca31288e-1a9a-42df-8e11-f7ed16c5fa1f",
-                    "path": "<XInputController>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Xbox",
-                    "action": "Prone",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -804,6 +771,39 @@
                     "processors": "",
                     "groups": "Xbox",
                     "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2056db64-9927-46cf-a974-0ac1553a53f2",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Prone",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d57d71c3-26a1-4cff-8749-dda0140e3b9c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "Prone",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d872620-3e21-43ff-885e-700eb2cc0657",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "Prone",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
