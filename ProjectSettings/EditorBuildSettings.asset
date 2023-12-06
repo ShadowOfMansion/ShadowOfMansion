@@ -31,3 +31,5 @@ EditorBuildSettings:
       type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: f4687e337c6012f40a487fd66e19f2da,
       type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 60b4582643029b44b8acc5915043b685,
+      type: 2}
