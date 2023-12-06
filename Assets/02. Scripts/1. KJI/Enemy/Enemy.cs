@@ -11,14 +11,14 @@ public class Enemy : MonoBehaviour
     public float searchTime = 300f; // 5분 = 300초 (수색 시간)
     public float rampageDuration = 180f; // 3분 = 180초 (폭주 지속 시간)
     public float attackRange = 2f; // 플레이어를 공격할 수 있는 범위
-    public Animator enemyAnimator; // 적 캐릭터의 애니메이터
+    //public Animator enemyAnimator; // 적 캐릭터의 애니메이터
 
-    public AudioSource audioSource; // 소리를 재생하기 위한 오디오 소스
-    public AudioClip idleSound; // Idle 상태의 소리
-    public AudioClip chaseSound; // Chase 상태의 소리
-    public AudioClip attackSound; // Attack 상태의 소리
-    public AudioClip searchSound; // Search 상태의 소리
-    public AudioClip rampageSound; // Rampage 상태의 소리
+    //public AudioSource audioSource; // 소리를 재생하기 위한 오디오 소스
+    //public AudioClip idleSound; // Idle 상태의 소리
+    //public AudioClip chaseSound; // Chase 상태의 소리
+    //public AudioClip attackSound; // Attack 상태의 소리
+    //public AudioClip searchSound; // Search 상태의 소리
+    //public AudioClip rampageSound; // Rampage 상태의 소리
 
     private enum EnemyState
     {
@@ -36,8 +36,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         
-        enemyAnimator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        //enemyAnimator = GetComponent<Animator>();
+        //audioSource = GetComponent<AudioSource>();
         player = GameObject.Find("Player").transform;
     }
 
@@ -48,23 +48,23 @@ public class Enemy : MonoBehaviour
         // 각 상태에 따른 소리 재생
         if (currentState == EnemyState.Idle)
         {
-            PlaySound(idleSound);
+            //PlaySound(idleSound);
         }
         else if (currentState == EnemyState.Chase)
         {
-            PlaySound(chaseSound);
+            //PlaySound(chaseSound);
         }
         else if (currentState == EnemyState.Attack)
         {
-            PlaySound(attackSound);
+            //PlaySound(attackSound);
         }
         else if (currentState == EnemyState.Search)
         {
-            PlaySound(searchSound);
+            //PlaySound(searchSound);
         }
         else if (currentState == EnemyState.Rampage)
         {
-            PlaySound(rampageSound);
+            //PlaySound(rampageSound);
         }
 
         // 적 캐릭터의 상태 전환 및 행동 처리
@@ -135,10 +135,10 @@ public class Enemy : MonoBehaviour
     // AudioClip을 받아 해당 소리를 재생하는 함수
     void PlaySound(AudioClip clip)
     {
-        if (!audioSource.isPlaying || audioSource.clip != clip)
+        /*if (!audioSource.isPlaying || audioSource.clip != clip)
         {
             audioSource.clip = clip;
             audioSource.Play();
-        }
+        }*/
     }
 }
