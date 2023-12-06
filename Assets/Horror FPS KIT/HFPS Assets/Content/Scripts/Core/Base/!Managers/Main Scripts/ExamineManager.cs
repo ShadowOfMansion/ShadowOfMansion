@@ -609,6 +609,12 @@ namespace HFPS.Player
 
             if (isInspect) firstExamine.isExamined = true;
 
+            if (firstExamine.itemType == InteractiveItem.ItemType.OnlyExamine && !EnemyEventTrigger.Instance.isChecked.Contains(firstExamine.examineTitle))
+            {
+                EnemyEventTrigger.Instance.isChecked.Add(firstExamine.examineTitle);
+                EnemyEventTrigger.Instance.CollectionStatus++;
+            }
+
             if (!isPaper)
             {
                 if (!string.IsNullOrEmpty(firstExamine.examineTitle))

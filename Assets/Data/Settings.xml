@@ -1,7 +1,7 @@
 <Settings>
   <General>
     <Option Name="input_controller" Value="0" />
-    <Option Name="game_volume" Value="0.43" />
+    <Option Name="game_volume" Value="0.24" />
     <Option Name="mouse_sensitivity" Value="2" />
     <Option Name="vertical_sensitivity" Value="2" />
     <Option Name="horizontal_sensitivity" Value="2" />

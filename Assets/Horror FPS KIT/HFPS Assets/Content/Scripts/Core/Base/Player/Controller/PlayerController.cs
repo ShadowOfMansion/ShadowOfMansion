@@ -5,6 +5,7 @@ using ThunderWire.Utilities;
 using ThunderWire.Helpers;
 using ThunderWire.Input;
 using HFPS.Systems;
+using System.Collections.Generic;
 
 namespace HFPS.Player
 {
@@ -844,6 +845,17 @@ namespace HFPS.Player
 
                 if (wallRicochet && isGrounded)
                     wallRicochet = false;
+            }
+
+            Ray playerLook = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit rayHit;
+            if (Physics.Raycast(playerLook, out rayHit, 1.5f, LayerMask.GetMask("Clue")))
+            {
+                if (!EnemyEventTrigger.Instance.isChecked.Contains(rayHit.collider.gameObject.name))
+                {
+                    EnemyEventTrigger.Instance.isChecked.Add(rayHit.collider.gameObject.name);
+                    EnemyEventTrigger.Instance.CollectionStatus++;
+                }
             }
         }
 
