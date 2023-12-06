@@ -108,6 +108,8 @@ namespace HFPS.Player
 
             if (InputHandler.InputIsInitialized && !gameManager.isPaused && !gameManager.isInventoryShown)
             {
+                RotateButton = InputHandler.ReadButton("Fire");
+
                 if (objectRaycast && !antiSpam && !gameManager.isWeaponZooming)
                 {
                     if (InputHandler.ReadButtonOnce(this, "Examine"))

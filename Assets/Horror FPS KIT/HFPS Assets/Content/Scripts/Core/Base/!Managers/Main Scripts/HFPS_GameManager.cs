@@ -269,6 +269,7 @@ namespace HFPS.Systems
             bindPath_Use = InputHandler.CompositeOf("Use").GetBindingPath();
             bindPath_Grab = InputHandler.CompositeOf("Examine").GetBindingPath();
             bindPath_Throw = InputHandler.CompositeOf("Zoom").GetBindingPath();
+            bindPath_Rotate = InputHandler.CompositeOf("Fire").GetBindingPath();
             bindPath_Cursor = InputHandler.CompositeOf("Zoom").GetBindingPath();
         }
 
