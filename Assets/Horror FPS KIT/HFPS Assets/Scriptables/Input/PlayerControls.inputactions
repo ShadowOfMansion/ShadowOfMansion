@@ -42,6 +42,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "f18b9e3f-c286-429d-bdc7-a7f9eb202bc2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Zoom",
                     "type": "Button",
                     "id": "2f9686dd-bb1d-4943-a7a7-b98ea36f1a4b",
@@ -69,9 +78,36 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "UseFlashlight",
+                    "name": "UseItem1",
                     "type": "Button",
                     "id": "23834e28-0e95-4727-9252-a63bb5b3f225",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseItem2",
+                    "type": "Button",
+                    "id": "8345094c-9693-4840-9629-9b8444a33cc5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseItem3",
+                    "type": "Button",
+                    "id": "c704ff4c-9ddd-4c9d-b677-5ccebf387bf6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UseItem4",
+                    "type": "Button",
+                    "id": "6ef233b4-ec72-4686-b725-4deda5adf1f9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -379,7 +415,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "UseFlashlight",
+                    "action": "UseItem1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -390,7 +426,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PS4",
-                    "action": "UseFlashlight",
+                    "action": "UseItem1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -401,7 +437,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Xbox",
-                    "action": "UseFlashlight",
+                    "action": "UseItem1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -468,6 +504,138 @@
                     "processors": "",
                     "groups": "Xbox",
                     "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "09ff2f6d-1c82-48d2-8abc-e148aac97e3b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2be73508-0928-4eac-a6d7-f6b30b5f0d6f",
+                    "path": "<DualShockGamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "847f2ab9-0f2e-46d0-bcb9-31ff3aad0e8e",
+                    "path": "<XInputController>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62564c0f-f164-4b19-8a45-f4af83f78c85",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "UseItem2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed72b460-4367-4a76-a6a3-ba1d26072a0b",
+                    "path": "<DualShockGamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "UseItem2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2749e68-a4f8-4bd4-9977-7be2ea4e462f",
+                    "path": "<XInputController>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "UseItem2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e98ed362-e9a1-4063-a567-69cd9768314f",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "UseItem3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c77082c-d6b5-423b-a256-22809f3613fb",
+                    "path": "<DualShockGamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "UseItem3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa326353-daf0-4b34-9faf-ae246ab195c0",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "UseItem3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df4df8f2-9f69-4bb6-bacc-41404ed0605e",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "UseItem4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8990811e-ff4f-4d79-a61d-664bded8dd85",
+                    "path": "<DualShockGamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS4",
+                    "action": "UseItem4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44ae9e34-7136-49bc-bc8c-c113c1d45261",
+                    "path": "<XInputController>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "UseItem4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
