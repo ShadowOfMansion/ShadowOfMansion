@@ -33,8 +33,11 @@ EditorBuildSettings:
     path: Assets/01. Scenes/Loading.unity
     guid: b8e61e3ac6c393c4fb06a8fc48840403
   - enabled: 1
-    path: Assets/01. Scenes/Game.unity
+    path: Assets/01. Scenes/1. KJI/Game.unity
     guid: 4bb2659497a03cd4c95a0d987287013f
+  - enabled: 1
+    path: Assets/01. Scenes/StartLoading.unity
+    guid: 6e435028e90c64af0ba9eeb7bd0c2c95
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 879dc59d21f31734c95279731f769bef,
       type: 2}

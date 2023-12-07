@@ -10510,7 +10510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7649b3e3caa9ca4fafec69782ce570d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToLoad: Loading
+  SceneToLoad: StartLoading
 --- !u!82 &1623702752
 AudioSource:
   m_ObjectHideFlags: 0
