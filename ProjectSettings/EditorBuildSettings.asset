@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/SceneLoader.unity
     guid: e92d1d4c15fc07a42b93b5e226dab4fd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Main Scenes/Showcase.unity
     guid: 18578a8c82c5c9248a506d55236cae4c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Main Scenes/TheHouse Demo.unity
     guid: 9c1e1ef0d125341449211600dac25344
   - enabled: 1
@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Example Scenes/ScenePresistency/SavingScene02.unity
     guid: a7bfff2b296037b4eba8867601e57531
+  - enabled: 1
+    path: Assets/01. Scenes/Start.unity
+    guid: b85c215da48e4a0459d900773c9fa4ff
+  - enabled: 1
+    path: Assets/01. Scenes/Loading.unity
+    guid: b8e61e3ac6c393c4fb06a8fc48840403
+  - enabled: 1
+    path: Assets/01. Scenes/Game.unity
+    guid: 4bb2659497a03cd4c95a0d987287013f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 879dc59d21f31734c95279731f769bef,
       type: 2}
