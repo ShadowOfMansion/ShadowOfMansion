@@ -12,6 +12,7 @@ using UnityEngine.UI;
 using ThunderWire.Input;
 using ThunderWire.Utilities;
 using HFPS.Systems;
+using Unity.VisualScripting;
 
 namespace HFPS.Player
 {
@@ -611,8 +612,12 @@ namespace HFPS.Player
 
             if (firstExamine.itemType == InteractiveItem.ItemType.OnlyExamine && !EnemyEventTrigger.Instance.isChecked.Contains(firstExamine.examineTitle))
             {
-                EnemyEventTrigger.Instance.isChecked.Add(firstExamine.examineTitle);
-                EnemyEventTrigger.Instance.CollectionStatus++;
+                if(firstExamine.gameObject.transform.parent.name.Contains("Quest_"))
+                {
+                    EnemyEventTrigger.Instance.isChecked.Add(firstExamine.gameObject.transform.parent.name);
+                    EnemyEventTrigger.Instance.CollectionStatus++;
+                    EnemyEventTrigger.Instance.ActiveClueHint(int.Parse(firstExamine.gameObject.transform.parent.name.Replace("Quest_", "")));
+                }
             }
 
             if (!isPaper)

@@ -855,6 +855,7 @@ namespace HFPS.Player
                 {
                     EnemyEventTrigger.Instance.isChecked.Add(rayHit.collider.gameObject.name);
                     EnemyEventTrigger.Instance.CollectionStatus++;
+                    EnemyEventTrigger.Instance.ActiveClueHint(int.Parse(rayHit.collider.gameObject.name));
                 }
             }
         }
