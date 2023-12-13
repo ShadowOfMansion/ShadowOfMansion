@@ -75,12 +75,12 @@ namespace HFPS.Systems
             {
                 if (number != 10 && number != 11 && number != 12 && number != 13 && number != 14 && number != 15)
                 {
-                    if (enterCode) { AudioSource.PlayClipAtPoint(enterCode, transform.position, enterCodeVolume); }
-                    numberInsert += number;
-                    AccessCodeText.text += number.ToString();
-                    Debug.Log(number);
-                    Debug.Log(numberInsert);
-                    Debug.Log(AccessCodeText.text);
+                    if(numberInsert.Length < 6)
+                    {
+                        if (enterCode) { AudioSource.PlayClipAtPoint(enterCode, transform.position, enterCodeVolume); }
+                        numberInsert += number;
+                        AccessCodeText.text += number.ToString();
+                    }
                 }
                 else
                 {
