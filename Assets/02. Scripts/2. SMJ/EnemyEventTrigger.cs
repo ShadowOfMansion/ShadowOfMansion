@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using HFPS.Systems;
+using System.Collections;
 
 public class EnemyEventTrigger : MonoBehaviour
 {

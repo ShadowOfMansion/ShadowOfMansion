@@ -12,6 +12,7 @@ using UnityEngine.Events;
 using ThunderWire.Utilities;
 using Newtonsoft.Json.Linq;
 using HFPS.Player;
+using Oculus.Interaction;
 
 namespace HFPS.Systems
 {
@@ -625,6 +626,27 @@ namespace HFPS.Systems
                     goToLastWaypoint = true;
                 }
             }
+
+            Collider[] collis = AutoOpenDoor();
+            foreach (Collider collider in collis)
+            {
+                if (collider.gameObject.GetComponent<DynamicObject>() != null)
+                {
+                    if (collider.gameObject.GetComponent<DynamicObject>().dynamicType == Type_Dynamic.Door)
+                    {
+                        Animation anim = collider.gameObject.GetComponent<Animation>();
+                        foreach (AnimationState state in anim)
+                        {
+                            anim.Play(state.name);
+                            StartCoroutine(delayAnimPlay());
+                        }
+                    }
+                }
+            }
+        }
+        IEnumerator delayAnimPlay()
+        {
+            yield return new WaitForSeconds(1);
         }
 
         /// <summary>
@@ -1446,6 +1468,11 @@ namespace HFPS.Systems
         Collider[] ThreatsInRadius(float radius)
         {
             return Physics.OverlapSphere(transform.position, radius, threatMask, QueryTriggerInteraction.Collide);
+        }
+
+        Collider[] AutoOpenDoor()
+        {
+            return Physics.OverlapSphere(new Vector3(transform.position.x, transform.position.y + 1.2f, transform.position.z), 0.3f, LayerMask.GetMask("Interact"));
         }
 
         /// <summary>
