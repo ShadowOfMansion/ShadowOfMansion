@@ -105,7 +105,7 @@ namespace HFPS.Systems
 
 #region Public Variables
         public GameObject m_PlayerObj;
-        public string sceneLoaderName = "SceneLoader";
+        public string sceneLoaderName = "StartLoading";
         public bool isCursorShown = false;
         public bool pauseTime = false;
 

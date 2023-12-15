@@ -6,44 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/MainMenu.unity
-    guid: 9aa959960fff2014d9064643094534f3
-  - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/SceneLoader.unity
-    guid: e92d1d4c15fc07a42b93b5e226dab4fd
-  - enabled: 0
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Main Scenes/Showcase.unity
-    guid: 18578a8c82c5c9248a506d55236cae4c
-  - enabled: 0
-    path: Assets/01. Scenes/3. IDK/TheHouse Demo.unity
-    guid: 9c1e1ef0d125341449211600dac25344
-  - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Example Scenes/Basic/EmptyScenePlayer.unity
-    guid: f68992d4b7e8bc74f9e180eaf57e63d6
-  - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Example Scenes/ScenePresistency/SavingScene01.unity
-    guid: 161be0ba3384e16488c355d809e2d394
-  - enabled: 1
-    path: Assets/Horror FPS KIT/HFPS Assets/Content/Scenes/Example Scenes/ScenePresistency/SavingScene02.unity
-    guid: a7bfff2b296037b4eba8867601e57531
-  - enabled: 1
     path: Assets/01. Scenes/PC/Start.unity
     guid: b85c215da48e4a0459d900773c9fa4ff
-  - enabled: 0
-    path: Assets/01. Scenes/Loading.unity
-    guid: b8e61e3ac6c393c4fb06a8fc48840403
-  - enabled: 0
-    path: Assets/01. Scenes/1. KJI/Game.unity
-    guid: 4bb2659497a03cd4c95a0d987287013f
   - enabled: 1
     path: Assets/01. Scenes/PC/StartLoading.unity
     guid: 6e435028e90c64af0ba9eeb7bd0c2c95
   - enabled: 1
-    path: Assets/01. Scenes/1. KJI/PC/End.unity
-    guid: 5e5ee1174dd840f4fb7ae4b8e47e4bde
+    path: Assets/01. Scenes/PC/ShadowOfMansion.unity
+    guid: 09ce9251fbfb8be418ccfce492f09d36
   - enabled: 1
-    path: Assets/01. Scenes/ShadowOfMansion.unity
-    guid: 5294533b09965f345ad70bdb03512a1a
+    path: Assets/01. Scenes/PC/End.unity
+    guid: 59805862cf033a04db1a1c3f94ac0ac2
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 879dc59d21f31734c95279731f769bef,
       type: 2}
