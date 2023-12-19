@@ -414,7 +414,7 @@ Transform:
   - {fileID: 2908359063522127509}
   - {fileID: 534468046989262034}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!143 &6319529702040776150
 CharacterController:
@@ -596,7 +596,6 @@ MonoBehaviour:
     walkSpeed: 3
     runSpeed: 7
     crouchSpeed: 2
-    proneSpeed: 1
     inWaterSpeed: 2
     climbSpeed: 1.5
     pushSpeed: 2
@@ -608,7 +607,6 @@ MonoBehaviour:
     enableJump: 1
     enableRun: 1
     enableCrouch: 1
-    enableProne: 1
     enableSliding: 1
     airControl: 0
     enableFly: 0
@@ -622,7 +620,6 @@ MonoBehaviour:
     fallDamageMultiplier: 5
     standFallTreshold: 4
     crouchFallTreshold: 3
-    consoleToProneTime: 0.3
     wallRicochetCap: 0.1
   slidingSettings:
     slideRayLength: 0.5
@@ -653,13 +650,10 @@ MonoBehaviour:
   controllerAdjustments:
     normalHeight: 2
     crouchHeight: 1.4
-    proneHeight: 0.6
     camNormalHeight: 0.9
     camCrouchHeight: 0.2
-    camProneHeight: -0.4
     normalCenter: {x: 0, y: 0, z: 0}
     crouchCenter: {x: 0, y: -0.3, z: 0}
-    proneCenter: {x: 0, y: -0.7, z: 0}
   cameraHeadBob:
     cameraAnimations: {fileID: 9004218213586699848}
     cameraIdle: CameraIdle
@@ -1535,6 +1529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7999247810110328003}
   - component: {fileID: 1584430135911709689}
+  - component: {fileID: 5394963994325495802}
   m_Layer: 13
   m_Name: ExamineLight
   m_TagString: Untagged
@@ -1619,6 +1614,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &5394963994325495802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106361232209873540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1126382573944935379
 GameObject:
   m_ObjectHideFlags: 0
